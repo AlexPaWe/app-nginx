@@ -41,7 +41,6 @@ libraries:
     kconfig:
       - CONFIG_LIBNGINX_MAIN_FUNCTION=y
   tinyalloc: '0.5'
-  tlsf: '0.5'
 volumes:
   fs0:
     driver: 9pfs
