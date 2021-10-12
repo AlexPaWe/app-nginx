@@ -1,0 +1,5 @@
+/build/
+/fs0/
+.config
+.config.old
+initramfs.cpio
