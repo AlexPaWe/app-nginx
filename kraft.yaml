@@ -1,7 +1,8 @@
 specification: '0.5'
 name: nginx
 unikraft:
-  version: '0.5'
+  version: staging
+  source: git://github.com/AlexPaWe/unikraft.git
   kconfig:
     - CONFIG_LIBUK9P=y
     - CONFIG_LIB9PFS=y
@@ -21,10 +22,10 @@ targets:
   - architecture: x86_64
     platform: kvm
 libraries:
-  pthread-embedded: '0.5'
-  newlib: '0.5'
+  pthread-embedded: staging
+  newlib: staging
   lwip:
-    version: '0.5'
+    version: staging
     kconfig:
       - CONFIG_LWIP_UKNETDEV=y
       - CONFIG_LWIP_TCP=y
@@ -37,11 +38,13 @@ libraries:
       - CONFIG_LWIP_DHCP=y
       - CONFIG_LWIP_DNS=y
   nginx:
-    version: '0.5'
+    version: staging
     kconfig:
       - CONFIG_LIBNGINX_MAIN_FUNCTION=y
-  tinyalloc: '0.5'
-  tlsf: '0.5'
+  tinyalloc: staging
+  tlsf: staging
+  mimalloc:
+    version: staging
 volumes:
   fs0:
     driver: 9pfs
