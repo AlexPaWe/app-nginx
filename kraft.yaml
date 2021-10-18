@@ -18,6 +18,8 @@ unikraft:
     - CONFIG_UKSYSINFO=y
     - CONFIG_LIBUKMMAP=y
     - CONFIG_LIBUKTIME=y
+    - CONFIG_LIBSYSCALL_SHIM=y
+    - CONFIG_LIBSYSCALL_SHIM_LIBCSTUBS=y
 targets:
   - architecture: x86_64
     platform: kvm
