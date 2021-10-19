@@ -24,8 +24,10 @@ targets:
   - architecture: x86_64
     platform: kvm
 libraries:
-  pthread-embedded: staging
-  newlib: staging
+  pthread-embedded:
+    version: staging
+  newlib:
+    version: staging
   lwip:
     version: staging
     kconfig:
@@ -43,11 +45,15 @@ libraries:
     version: staging
     kconfig:
       - CONFIG_LIBNGINX_MAIN_FUNCTION=y
-  tinyalloc: staging
-  tlsf: staging
+  tinyalloc:
+    version: staging
+  tlsf:
+    version: staging
   mimalloc:
     version: staging
 volumes:
   fs0:
     driver: 9pfs
     source: ./fs0
+networks:
+  net0: {}
